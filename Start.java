@@ -1,4 +1,4 @@
-//Version 1.0.0
+//Version 1.0.2
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -27,7 +27,7 @@ class Lab7 {
                 orderID[i] = Integer.parseInt(arrOfString[2]);
                 totalPrice = unitPrice[i] * quantity[i] - discount[i] * 
                              quantity[i] * unitPrice[i];
-                outFile.println(totalPrice);
+                outFile.printf(orderID[i]+ ", $" + "%.2f\n", totalPrice);
             }
             outFile.close();
         } catch(Exception e) {
